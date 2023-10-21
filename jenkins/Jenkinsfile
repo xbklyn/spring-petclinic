@@ -4,7 +4,11 @@ pipeline {
   stages {
     
     stage("Test pull image") {
-      sh 'docker pull nginx'
+     
+     steps {
+
+       sh 'docker pull nginx'
+     }
     }
   }
 }
