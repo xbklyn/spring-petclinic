@@ -12,6 +12,8 @@ pipeline {
     stage('Docker Build') {
     	agent any
       steps {
+        sh 'export DOCKER_TLS_VERIFY=1'
+
       	sh 'docker build --tlsverify --tlscacert=/docker-certs/ca.pem --tlscert=/docker-certs/server-key.pem --tlskey=/docker-certs/server-key.pem -t shanem/spring-petclinic:latest .'
       }
     }
