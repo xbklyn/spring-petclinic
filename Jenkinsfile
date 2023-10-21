@@ -14,7 +14,7 @@ pipeline {
       steps {
         sh 'export DOCKER_TLS_VERIFY=1'
 
-      	sh 'docker build --tlscacert=/docker-certs/ca.pem --tlscert=/docker-certs/server-key.pem --tlskey=/docker-certs/server-key.pem -t shanem/spring-petclinic:latest .'
+      	sh 'docker build -t shanem/spring-petclinic:latest .'
       }
     }
   }
