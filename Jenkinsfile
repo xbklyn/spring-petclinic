@@ -12,8 +12,7 @@ pipeline {
     stage('Docker Build') {
     	agent any
       steps {
-      	sh 'docker build --tlsverify --tlscacert=/docker-certs/ca.pem --tlscert=/docker-certs/server-key.pem --tlskey=/docker-certs/server-key.pem -t shanem/spring-petclinic:latest .
-'
+      	sh 'docker build --tlsverify --tlscacert=/docker-certs/ca.pem --tlscert=/docker-certs/server-key.pem --tlskey=/docker-certs/server-key.pem -t shanem/spring-petclinic:latest .'
       }
     }
   }
