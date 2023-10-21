@@ -3,12 +3,12 @@ pipeline {
 
   stages {
     
+    stage("ls") {
+      steps {
+        sh 'ls -la '
+      }
+    }
     stage("Test pull image") {
-     
-     steps {
-
-      sh "ls -la"
-     }
      steps {
 
        sh 'docker pull nginx'
