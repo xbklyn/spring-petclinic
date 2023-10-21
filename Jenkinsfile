@@ -14,6 +14,8 @@ pipeline {
       steps {
         sh 'export DOCKER_TLS_VERIFY=1'
 
+        sh 'export DOCKER_CERT_PATH=/docker-certs/ca.pem'
+
       	sh 'docker build -t shanem/spring-petclinic:latest .'
       }
     }
